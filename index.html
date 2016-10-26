@@ -1,4 +1,4 @@
-﻿<!Doctype html>
+<!Doctype html>
 <html>
 <head>
 	<title>Menu CSS jQuery</title>
@@ -14,37 +14,56 @@
 			$('#menu ul li').hover(function(){
 				$(this).find('span').stop().animate({
 					marginTop:"-40px"
-				},400);
+				},300);
 			},function(){
 				$(this).find('span').stop().animate({
 					marginTop:"0px"
-				},300);
+				},1000);
 			});
 	});
 	</script>
 
 	<style>
-		body{background:black;
+		body{
+			background:#CDCDCD;
 			}
-		#menu{width:700px;
-			margin:auto;
+		body::after{
+			content:"";
+			background-image:url("bgGrid.jpg");
+		 	opacity: 0.2;
+  			top: 0;
+  			left: 0;
+ 			bottom: 0;
+ 			right: 0;
+ 			position: absolute;
+  			z-index: -1;
+		}
+		#menu{
+			width: 700px;
+			margin: 0 auto;
            	}
-		#menu ul{list-style:none;
-			font-size:18px;
+		#menu ul{
+			list-style:none;
+			/*font-size:18px;*/
+			font-size: 1em;
 			font-family:"Hobo Std";
 			margin:0px;
 			padding:0px;
 			height:40px;
 			overflow:hidden;
 			}
-		#menu ul li{float:left;
+		#menu ul li{
+			float:left;
 			}
-		#menu ul li a, #menu ul li span{width:100px;
+		#menu ul li a, #menu ul li span{
+			width:100px;
 			padding:10px 20px;
 			height:18px;
-			color:#FFFFFF;
-			/*background:url("Degrade_img.jpg") repeat-x; */
-            background:red;
+			/*color:#FFFFFF;*/
+			color:#33CCFF;
+			/*background:url("Degrade_img.jpg") repeat-x;*/
+            /*background:red;*/
+            background:gray;
 			text-decoration:none;
 			overflow:hidden;
 			text-align:center;
@@ -56,10 +75,12 @@
 		#menu ul li a{
 			float:left;
 			background:url("Degrade_img.jpg") repeat-x left bottom;
-			color:#000000;
+			/*color:#000000;*/
+			color: #33CCFF;
             height:10px;
 			}
 	</style>
+	<!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
 </head>
 <body>
 	<div id="menu">
